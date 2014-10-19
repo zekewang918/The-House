@@ -1,0 +1,145 @@
+fileFormatVersion: 2
+guid: cd6cff21971ad4816aabc38dd4ccf0fc
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: barrels
+    100004: boards
+    100006: body_house
+    100008: chimneys
+    100010: door
+    100012: fundametnts
+    100014: garage
+    100016: gutters
+    100018: lamp_exterior
+    100020: parapet
+    100022: ridge
+    100024: roof
+    100026: stairs
+    100028: wall_barrels
+    100030: window_roof
+    100032: windows
+    400000: //RootNode
+    400002: barrels
+    400004: boards
+    400006: body_house
+    400008: chimneys
+    400010: door
+    400012: fundametnts
+    400014: garage
+    400016: gutters
+    400018: lamp_exterior
+    400020: parapet
+    400022: ridge
+    400024: roof
+    400026: stairs
+    400028: wall_barrels
+    400030: window_roof
+    400032: windows
+    2300000: barrels
+    2300002: boards
+    2300004: body_house
+    2300006: chimneys
+    2300008: door
+    2300010: fundametnts
+    2300012: garage
+    2300014: gutters
+    2300016: lamp_exterior
+    2300018: parapet
+    2300020: ridge
+    2300022: roof
+    2300024: stairs
+    2300026: wall_barrels
+    2300028: window_roof
+    2300030: windows
+    3300000: barrels
+    3300002: boards
+    3300004: body_house
+    3300006: chimneys
+    3300008: door
+    3300010: fundametnts
+    3300012: garage
+    3300014: gutters
+    3300016: lamp_exterior
+    3300018: parapet
+    3300020: ridge
+    3300022: roof
+    3300024: stairs
+    3300026: wall_barrels
+    3300028: window_roof
+    3300030: windows
+    4300000: body_house
+    4300002: fundametnts
+    4300004: wall_barrels
+    4300006: boards
+    4300008: barrels
+    4300010: chimneys
+    4300012: gutters
+    4300014: windows
+    4300016: door
+    4300018: garage
+    4300020: parapet
+    4300022: lamp_exterior
+    4300024: stairs
+    4300026: roof
+    4300028: ridge
+    4300030: window_roof
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    pivotNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
