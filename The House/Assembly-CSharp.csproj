@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CharacterMotor.cs" />
+     <Compile Include="Assets\Scripts\EventTrigger.cs" />
      <Compile Include="Assets\Scripts\FPSController.cs" />
      <Compile Include="Assets\Scripts\MainMenuGUI.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
