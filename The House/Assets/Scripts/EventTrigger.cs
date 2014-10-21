@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(CameraSwitch))]
 public class EventTrigger : MonoBehaviour {
 
 	public float rayLength = 100f;
 
+	private CameraSwitch cs;
+
 	void Start(){
+		cs = GetComponent<CameraSwitch> ();
 	}
 
 	public void TouchEvent(){
@@ -18,9 +22,9 @@ public class EventTrigger : MonoBehaviour {
 		if (Physics.Raycast(eventToucher, out hit, rayLength)){
 			// Check if the collider that hits is Enemy
 			
-			if(hit.collider.tag == "Event"){
-				Destroy(hit.collider);
-
+			if(hit.collider.tag == "Armoire-Door"){
+				Destroy(hit.collider.gameObject);
+				cs.cameraSwitch(1);
 			}
 		
 		}

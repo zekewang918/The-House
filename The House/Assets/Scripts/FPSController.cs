@@ -46,6 +46,6 @@ public class FPSController : MonoBehaviour
 		motor.inputMoveDirection = transform.rotation * directionVector;
 		motor.inputJump = Input.GetButton("Jump");
 		et.TouchEvent ();
-		Debug.Log("GOT IT");
+
 	}
 }

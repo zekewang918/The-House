@@ -6,7 +6,7 @@ public class CameraSwitch : MonoBehaviour {
 	public Camera player;
 	public Camera armoire_locker;
 
-	void cameraSwitch(int n){
+	public void cameraSwitch(int n){
 		if (n == 0){
 			player.enabled = true;
 			armoire_locker.enabled = false;
