@@ -45,7 +45,9 @@ public class FPSController : MonoBehaviour
 		// Apply the direction to the CharacterMotor
 		motor.inputMoveDirection = transform.rotation * directionVector;
 		motor.inputJump = Input.GetButton("Jump");
-		et.TouchEvent ();
-
+		// If user press the space then event triger check if event can be triggered
+		if (Input.GetKey(KeyCode.F)){
+			et.TouchEvent ();
+		}
 	}
 }

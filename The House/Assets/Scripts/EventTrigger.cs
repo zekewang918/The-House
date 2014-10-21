@@ -23,7 +23,7 @@ public class EventTrigger : MonoBehaviour {
 			// Check if the collider that hits is Enemy
 			
 			if(hit.collider.tag == "Armoire-Door"){
-				Destroy(hit.collider.gameObject);
+				print ("Got it");
 				cs.cameraSwitch(1);
 			}
 		
