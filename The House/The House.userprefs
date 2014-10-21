@@ -1,11 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CameraSwitch.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FPSController.cs">
     <Files>
-      <File FileName="../../../../../../../Workspace/A1/Assets/Scripts/CharacterControl.cs" Line="136" Column="3" />
-      <File FileName="Assets/Scripts/CameraSwitch.cs" Line="18" Column="2" />
-      <File FileName="Assets/Scripts/FPSController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/EventTrigger.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/EventTrigger.cs" Line="17" Column="53" />
+      <File FileName="Assets/Scripts/MainMenuGUI.cs" Line="24" Column="4" />
+      <File FileName="../../../../../../../Workspace/A1/Assets/Scripts/CharacterControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/FPSController.cs" Line="11" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

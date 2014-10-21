@@ -3,16 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 
 // Require a character controller to be attached to the same game object
+[RequireComponent(typeof(EventTrigger))]
 [RequireComponent(typeof(CharacterMotor))]
-[AddComponentMenu("Character/FPS Input Controller")]
 
 public class FPSController : MonoBehaviour
 {
 	private CharacterMotor motor;
+	private EventTrigger et;
 	
 	// Use this for initialization
-	void Awake()
+	void Start()
 	{
+		et = GetComponent<EventTrigger> ();
 		motor = GetComponent<CharacterMotor>();
 	}
 	
@@ -43,5 +45,7 @@ public class FPSController : MonoBehaviour
 		// Apply the direction to the CharacterMotor
 		motor.inputMoveDirection = transform.rotation * directionVector;
 		motor.inputJump = Input.GetButton("Jump");
+		et.TouchEvent ();
+		Debug.Log("GOT IT");
 	}
 }
