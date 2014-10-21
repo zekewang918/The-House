@@ -20,6 +20,13 @@ public class FPSController : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		// Do move and jump 
+		Move ();
+		EventInspector ();
+		ChangeItem ();
+		CollectItem ();
+	}
+	void Move(){
 		// Get the input vector from kayboard or analog stick
 		Vector3 directionVector = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 		
@@ -44,8 +51,22 @@ public class FPSController : MonoBehaviour
 		// Apply the direction to the CharacterMotor
 		motor.inputMoveDirection = transform.rotation * directionVector;
 		motor.inputJump = Input.GetButton("Jump");
-		// If user press the space then event triger check if event can be triggered
+	}
+	// Function that collects items
+	void CollectItem(){
+
+	}
+	// Function that changes items
+	void ChangeItem(){
+		if (Input.GetKey(KeyCode.Alpha1)){
+
+		}
+	}
+	// Function that triggers the event
+	void EventInspector(){
+		// If user press the F then event triger check if event can be triggered
 		if (Input.GetKey(KeyCode.F)){
+			// Check if there is event can be triggered
 			et.TouchEvent ();
 		}
 	}
