@@ -2,19 +2,25 @@
 using System.Collections;
 using System.Collections.Generic;
 
-// Require a character controller to be attached to the same game object
+// Require a Event Trigger to be attached to the same game object
 [RequireComponent(typeof(EventTrigger))]
-
+// Require a Collect Item to be attached to the same game object
+[RequireComponent(typeof(CollectItem))]
 public class FPSController : MonoBehaviour
 {
+	// Create a CharacterMotor called motor
 	private CharacterMotor motor;
+	// Create a EventTrigger called et
 	private EventTrigger et;
+	// Create a CollectItem called ct
+	private CollectItem ct;
 	
 	// Use this for initialization
 	void Start()
 	{
 		et = GetComponent<EventTrigger> ();
 		motor = GetComponent<CharacterMotor>();
+		ct = GetComponent<CollectItem> ();
 	}
 	
 	// Update is called once per frame
@@ -22,8 +28,11 @@ public class FPSController : MonoBehaviour
 	{
 		// Do move and jump 
 		Move ();
+		// Inspect Events
 		EventInspector ();
+		// Change item if user press 1-8
 		ChangeItem ();
+		// Collect item if user click collectable item
 		CollectItem ();
 	}
 	void Move(){
@@ -54,7 +63,18 @@ public class FPSController : MonoBehaviour
 	}
 	// Function that collects items
 	void CollectItem(){
-
+		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+		RaycastHit hit;
+		if (Physics.Raycast (ray, out hit, 100)) {
+			GameObject target = hit.collider.gameObject;
+			if(Input.GetMouseButton(0))
+			{
+				if (target.tag == "Item"){
+					if (ct.CheckIfCollectable(target.name))
+						Destroy(target);
+				}
+			}
+		}
 	}
 	// Function that changes items
 	void ChangeItem(){
