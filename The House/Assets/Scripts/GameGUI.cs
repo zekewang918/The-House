@@ -18,18 +18,25 @@ public class GameGUI : MonoBehaviour {
 
 	private int storyline = 0;
 
-	private bool storyBegins = false;
+	private bool storyBegins = true;
 
 	private int level = 1;
 
 	private Story story;
 
+	private CameraSwitch cs;
+
 	void Start(){
+		cs = GetComponent<CameraSwitch> ();
 		story = GetComponent<Story> ();
 		haveItems [0] = true;
 		for (int i = 1; i < haveItems.Length;i++){
 			haveItems[i] = false;
 		}
+	}
+
+	void Update(){
+		cs.talking ();
 	}
 
 	void OnGUI(){

@@ -5,6 +5,7 @@ public class CameraSwitch : MonoBehaviour {
 
 	public Camera player;
 	public Camera armoire_locker;
+	public Camera CharacterFace;
 
 	public void cameraSwitch(int n){
 		if (n == 0){
@@ -14,5 +15,8 @@ public class CameraSwitch : MonoBehaviour {
 			player.enabled = false;
 			armoire_locker.enabled = true;
 		}
+	}
+	public void talking(){
+		CharacterFace.enabled = true;
 	}
 }
