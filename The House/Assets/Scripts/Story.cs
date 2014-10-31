@@ -14,6 +14,6 @@ public class Story : MonoBehaviour {
 		if (level == 1){
 			return Armoire[storyline];
 		}
-		return "BUG";
+		return "END";
 	}
 }

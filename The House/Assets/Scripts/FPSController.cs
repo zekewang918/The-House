@@ -2,10 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 
+// Require a GAME GUI to be attachd to the same game object
+//[RequireComponent(typeof(GameGUI))]
 // Require a Event Trigger to be attached to the same game object
-[RequireComponent(typeof(EventTrigger))]
+//[RequireComponent(typeof(EventTrigger))]
 // Require a Collect Item to be attached to the same game object
-[RequireComponent(typeof(CollectItem))]
+//[RequireComponent(typeof(CollectItem))]
 public class FPSController : MonoBehaviour
 {
 	// Create a CharacterMotor called motor
@@ -14,13 +16,17 @@ public class FPSController : MonoBehaviour
 	private EventTrigger et;
 	// Create a CollectItem called ct
 	private CollectItem ct;
-	
+
+	private GameGUI gameGUI; 
+
 	// Use this for initialization
 	void Start()
 	{
 		et = GetComponent<EventTrigger> ();
 		motor = GetComponent<CharacterMotor>();
 		ct = GetComponent<CollectItem> ();
+		gameGUI = GetComponent<GameGUI> ();
+
 	}
 	
 	// Update is called once per frame
@@ -34,6 +40,7 @@ public class FPSController : MonoBehaviour
 		ChangeItem ();
 		// Collect item if user click collectable item
 		CollectItem ();
+
 	}
 	void Move(){
 		// Get the input vector from kayboard or analog stick
@@ -70,8 +77,10 @@ public class FPSController : MonoBehaviour
 			if(Input.GetMouseButton(0))
 			{
 				if (target.tag == "Item"){
-					if (ct.CheckIfCollectable(target.name))
+					if (ct.CheckIfCollectable(target.name)){
 						Destroy(target);
+						gameGUI.haveItems[ct.markHasItem(target.name)] = true;
+					}
 				}
 			}
 		}

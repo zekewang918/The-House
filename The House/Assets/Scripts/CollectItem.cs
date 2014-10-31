@@ -4,12 +4,13 @@ using System.Collections;
 public class CollectItem : MonoBehaviour {
 	
 	//private Hashtable items;
-	private string items;
+	private string[] items = {"Hand", "Knife", "FlashLight"};
 	
 	void Start(){
 		//items = new Hashtable ();
 		//items.Add ("Knife", 1);
-		items = "Knife";
+		//items.Add ("FlashLight", 2);
+		//items = "Knife";
 	}
 	
 	public bool CheckIfCollectable(string item){
@@ -17,12 +18,20 @@ public class CollectItem : MonoBehaviour {
 			return true;
 		}
 		return false;*/
-		if (items == item)
-			return true;
-		else
-			return false;
+		for (int i = 1; i < items.Length; i++){
+			if (items[i] == item)
+				return true;
+		}
+		return false;
 	}
 	public void FUCK(){
 		print ("FUCK");
+	}
+	public int markHasItem(string item){
+		for (int i = 1; i < items.Length; i++){
+			if (items[i] == item)
+				return i;
+		}
+		return -1;
 	}
 }

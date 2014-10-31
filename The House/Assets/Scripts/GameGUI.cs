@@ -4,7 +4,11 @@ using System.Collections;
 [RequireComponent(typeof(Story))]
 public class GameGUI : MonoBehaviour {
 
+	public Texture[] itemsBG = new Texture[6];
+
 	public Texture[] items = new Texture[6];
+
+	public bool[] haveItems = new bool[6];
 
 	public Texture dialogBG;
 	
@@ -14,7 +18,7 @@ public class GameGUI : MonoBehaviour {
 
 	private int storyline = 0;
 
-	//private int storylineend = 2;
+	private bool storyBegins = false;
 
 	private int level = 1;
 
@@ -22,19 +26,30 @@ public class GameGUI : MonoBehaviour {
 
 	void Start(){
 		story = GetComponent<Story> ();
+		haveItems [0] = true;
+		for (int i = 1; i < haveItems.Length;i++){
+			haveItems[i] = false;
+		}
 	}
 
 	void OnGUI(){
 		for (int i = 0; i < 6; i++){
-			GUI.DrawTexture(new Rect(Screen.width * 0.2f + i * Screen.width * 0.1f,Screen.height * 0.9f,50.0f,50.0f), items[i]);
+			GUI.DrawTexture(new Rect(Screen.width * 0.2f + i * Screen.width * 0.1f,Screen.height * 0.9f,50.0f,50.0f), itemsBG[i]);
+		}
+
+		for (int i = 0; i < 6; i++){
+			if (haveItems[i] == true){
+				GUI.DrawTexture(new Rect(Screen.width * 0.2f + i * Screen.width * 0.1f,Screen.height * 0.9f,50.0f,50.0f), items[i]);
+			}
 		}
 
 
-
-		if (notEnd()){
-			Rect drect = new Rect (Screen.width * 0.15f, Screen.height*0.7f, Screen.width*0.85f, Screen.height*0.3f);
-			GUI.DrawTexture (drect, dialogBG);
-			GUI.Label (new Rect (Screen.width * 0.20f, Screen.height*0.75f, Screen.width*0.78f, Screen.height*0.23f), message);
+		if (storyBegins){
+			if (notEnd()){
+				Rect drect = new Rect (Screen.width * 0.15f, Screen.height*0.7f, Screen.width*0.85f, Screen.height*0.3f);
+				GUI.DrawTexture (drect, dialogBG);
+				GUI.Label (new Rect (Screen.width * 0.20f, Screen.height*0.75f, Screen.width*0.78f, Screen.height*0.23f), message);
+			}
 		}
 	}
 	bool notEnd(){

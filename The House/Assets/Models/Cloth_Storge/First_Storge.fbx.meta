@@ -141,6 +141,30 @@ ModelImporter:
     4300042: Archmodels_112_074_005
     4300044: Archmodels_112_074_001
     4300046: Archmodels_112_074_004
+    6400000: AM_102_001_001
+    6400002: AM_102_001_002
+    6400004: AM_102_001_003
+    6400006: AM_102_007_002
+    6400008: AM_102_007_003_MeshPart0
+    6400010: AM_102_007_003_MeshPart1
+    6400012: AM_102_014_001
+    6400014: AM_102_014_002_MeshPart0
+    6400016: AM_102_014_002_MeshPart1
+    6400018: AM_102_027_001
+    6400020: AM_102_027_002
+    6400022: AM_102_027_003
+    6400024: Archmodels_112_074_001
+    6400026: Archmodels_112_074_002
+    6400028: Archmodels_112_074_003
+    6400030: Archmodels_112_074_004
+    6400032: Archmodels_112_074_005
+    6400034: pasted__pasted__pCube1
+    6400036: pasted__pasted__pCube1 1
+    6400038: pasted__pasted__pCube2
+    6400040: pasted__pCube1
+    6400042: pasted__pCube1 1
+    6400044: pCube1
+    6400046: pCylinder1
     7400000: Take 001
     9500000: //RootNode
   materials:
@@ -165,7 +189,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
