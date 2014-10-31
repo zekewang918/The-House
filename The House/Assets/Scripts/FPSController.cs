@@ -30,7 +30,7 @@ public class FPSController : MonoBehaviour
 		Move ();
 		// Inspect Events
 		EventInspector ();
-		// Change item if user press 1-8
+		// Change item if user press 1-6
 		ChangeItem ();
 		// Collect item if user click collectable item
 		CollectItem ();
