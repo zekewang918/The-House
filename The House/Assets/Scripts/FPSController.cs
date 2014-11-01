@@ -10,6 +10,8 @@ using System.Collections.Generic;
 //[RequireComponent(typeof(CollectItem))]
 public class FPSController : MonoBehaviour
 {
+	public float speed = 1.0f;
+
 	// Create a CharacterMotor called motor
 	private CharacterMotor motor;
 	// Create a EventTrigger called et
@@ -41,10 +43,11 @@ public class FPSController : MonoBehaviour
 		// Collect item if user click collectable item
 		CollectItem ();
 
+
 	}
 	void Move(){
 		// Get the input vector from kayboard or analog stick
-		Vector3 directionVector = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+		/*Vector3 directionVector = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 		
 		if (directionVector != Vector3.zero)
 		{
@@ -66,7 +69,15 @@ public class FPSController : MonoBehaviour
 		
 		// Apply the direction to the CharacterMotor
 		motor.inputMoveDirection = transform.rotation * directionVector;
-		motor.inputJump = Input.GetButton("Jump");
+		motor.inputJump = Input.GetButton("Jump");*/
+		if (Input.GetKey(KeyCode.W)){
+			this.transform.Translate(0, 0, Time.deltaTime * speed, Space.Self);
+			this.GetComponent<Animation>().Play("stand");
+		}
+		if (Input.GetKey(KeyCode.S)){
+			this.transform.Translate(0, 0, -Time.deltaTime * speed/2, Space.Self);
+			this.GetComponent<Animation>().Play("stand");
+		}
 	}
 	// Function that collects items
 	void CollectItem(){
