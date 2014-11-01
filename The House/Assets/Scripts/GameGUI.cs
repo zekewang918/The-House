@@ -10,6 +10,8 @@ public class GameGUI : MonoBehaviour {
 
 	public bool[] haveItems = new bool[6];
 
+	public Texture[] lockPassword = new Texture[4];
+
 	public Texture dialogBG;
 	
 	private string message = "";
@@ -18,9 +20,9 @@ public class GameGUI : MonoBehaviour {
 
 	private int storyline = 0;
 
-	private bool storyBegins = true;
-
 	private int level = 1;
+
+	private bool storyBegins = true;
 
 	private Story story;
 
@@ -58,10 +60,18 @@ public class GameGUI : MonoBehaviour {
 				GUI.Label (new Rect (Screen.width * 0.20f, Screen.height*0.75f, Screen.width*0.78f, Screen.height*0.23f), message);
 			}
 		}
+
+		if(level == 1){
+
+		}
 	}
 	bool notEnd(){
 		if (index < story.getStoryLines(storyline, level).Length){ 
 			string temp = story.getStoryLines(storyline, level);
+			if (temp == "END"){
+				storyBegins = false;
+				return false;
+			}
 			message += temp[index];
 			index++;
 			return true;

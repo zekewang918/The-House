@@ -7,13 +7,21 @@ public class Story : MonoBehaviour {
 		 						"Angelia!!", "Ah..... Damn it", "WTF am I?"
 
 	};
-	void Start(){
 
-	}
+	private string[] Bedroom = {" ", " "
+
+
+	};
+
+	private string[] LivingRoom = {" ", " "
+
+	};
+
 	public string getStoryLines(int storyline, int level){
-		if (level == 1){
+		if (level == 1 && storyline < Armoire.Length){
 			return Armoire[storyline];
+		}else{
+			return "END";
 		}
-		return "END";
 	}
 }
