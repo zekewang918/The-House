@@ -21,6 +21,8 @@ public class FPSController : MonoBehaviour
 
 	private GameGUI gameGUI; 
 
+	private LightControl lc;
+
 	// Use this for initialization
 	void Start()
 	{
@@ -28,6 +30,7 @@ public class FPSController : MonoBehaviour
 		motor = GetComponent<CharacterMotor>();
 		ct = GetComponent<CollectItem> ();
 		gameGUI = GetComponent<GameGUI> ();
+		lc = GetComponent<LightControl> ();
 
 	}
 	
@@ -43,6 +46,7 @@ public class FPSController : MonoBehaviour
 		// Collect item if user click collectable item
 		CollectItem ();
 
+		TrigItem ();
 
 	}
 	void Move(){
@@ -95,6 +99,22 @@ public class FPSController : MonoBehaviour
 				}
 			}
 		}
+	}
+	void TrigItem(){
+		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+		RaycastHit hit;
+		if (Physics.Raycast (ray, out hit, 100)) {
+			GameObject target = hit.collider.gameObject;
+			if(Input.GetMouseButton(0))
+			{
+				if (target.tag == "Switch"){
+					print ("OYO");
+					lc.controlLight();
+				}
+			}
+		}
+
+
 	}
 	// Function that changes items
 	void ChangeItem(){
