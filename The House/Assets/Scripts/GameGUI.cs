@@ -18,11 +18,11 @@ public class GameGUI : MonoBehaviour {
 
 	private int index = 0;
 
-	private int storyline = 0;
+	public int storyline = 0;
 
-	private int level = 1;
+	public int level = 1;
 
-	private bool storyBegins = true;
+	//private bool storyBegins = true;
 
 	private Dialogs dialog;
 
@@ -42,36 +42,35 @@ public class GameGUI : MonoBehaviour {
 	}
 
 	void OnGUI(){
-		for (int i = 0; i < 6; i++){
-			GUI.DrawTexture(new Rect(Screen.width * 0.2f + i * Screen.width * 0.1f,Screen.height * 0.9f,50.0f,50.0f), itemsBG[i]);
-		}
-
-		for (int i = 0; i < 6; i++){
-			if (haveItems[i] == true){
-				GUI.DrawTexture(new Rect(Screen.width * 0.2f + i * Screen.width * 0.1f,Screen.height * 0.9f,50.0f,50.0f), items[i]);
-			}
-		}
-
-
-		if (storyBegins){
-			if (notEnd()){
-				Rect drect = new Rect (Screen.width * 0.15f, Screen.height*0.7f, Screen.width*0.85f, Screen.height*0.3f);
-				GUI.DrawTexture (drect, dialogBG);
-				GUI.Label (new Rect (Screen.width * 0.20f, Screen.height*0.75f, Screen.width*0.78f, Screen.height*0.23f), message);
-			}
-		}
 
 		if(level == 1){
+			if (storyline <= 2){
+				if (dialogNotEnd()){
+					Rect drect = new Rect (Screen.width * 0.15f, Screen.height*0.7f, Screen.width*0.85f, Screen.height*0.3f);
+					GUI.DrawTexture (drect, dialogBG);
+					GUI.Label (new Rect (Screen.width * 0.20f, Screen.height*0.75f, Screen.width*0.78f, Screen.height*0.23f), message);
+				}
+			}else{
+				for (int i = 0; i < 6; i++){
+					GUI.DrawTexture(new Rect(Screen.width * 0.2f + i * Screen.width * 0.1f,Screen.height * 0.9f,50.0f,50.0f), itemsBG[i]);
+				}
+				
+				for (int i = 0; i < 6; i++){
+					if (haveItems[i] == true){
+						GUI.DrawTexture(new Rect(Screen.width * 0.2f + i * Screen.width * 0.1f,Screen.height * 0.9f,50.0f,50.0f), items[i]);
+					}
+				}
 
+			}
 		}
 	}
-	bool notEnd(){
+	bool dialogNotEnd(){
 		if (index < dialog.getDialogs(storyline, level).Length){ 
 			string temp = dialog.getDialogs(storyline, level);
-			if (temp == "END"){
-				storyBegins = false;
+			/*if (temp == "END"){
+				//storyBegins = false;
 				return false;
-			}
+			}*/
 			message += temp[index];
 			index++;
 			return true;

@@ -3,19 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 
 // Require a GAME GUI to be attachd to the same game object
-//[RequireComponent(typeof(GameGUI))]
+[RequireComponent(typeof(GameGUI))]
 // Require a Event Trigger to be attached to the same game object
-//[RequireComponent(typeof(EventTrigger))]
+[RequireComponent(typeof(EventTrigger))]
 // Require a Collect Item to be attached to the same game object
-//[RequireComponent(typeof(CollectItem))]
+[RequireComponent(typeof(CollectItem))]
 public class FPSController : MonoBehaviour
 {
 	public float speed = 1.0f;
-	public float jumpSpeed = 100f;
-	private bool grounded = true;
 
 	// Create a CharacterMotor called motor
-	private CharacterMotor motor;
+	//private CharacterMotor motor;
 	// Create a EventTrigger called et
 	private EventTrigger et;
 	// Create a CollectItem called ct
@@ -31,7 +29,7 @@ public class FPSController : MonoBehaviour
 	void Start()
 	{
 		et = GetComponent<EventTrigger> ();
-		motor = GetComponent<CharacterMotor>();
+		//motor = GetComponent<CharacterMotor>();
 		ct = GetComponent<CollectItem> ();
 		gameGUI = GetComponent<GameGUI> ();
 		lc = GetComponent<LightControl> ();
@@ -41,17 +39,18 @@ public class FPSController : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		// Do move and jump 
-		Move ();
-		// Inspect Events
-		EventInspector ();
-		// Change item if user press 1-6
-		ChangeItem ();
-		// Collect item if user click collectable item
-		CollectItem ();
+		if(CheckIfControl ()){
+			// Do move and jump 
+			Move ();
+			// Inspect Events
+			EventInspector ();
+			// Change item if user press 1-6
+			ChangeItem ();
+			// Collect item if user click collectable item
+			CollectItem ();
 
-		TrigItem ();
-
+			TrigItem ();
+		}
 	}
 	void Move(){
 		// Get the input vector from kayboard or analog stick
@@ -120,7 +119,7 @@ public class FPSController : MonoBehaviour
 			if(Input.GetMouseButton(0))
 			{
 				if (target.tag == "Switch"){
-					print ("OYO");
+					//print ("OYO");
 					lc.controlLight();
 				}
 			}
@@ -141,6 +140,16 @@ public class FPSController : MonoBehaviour
 			// Check if there is event can be triggered
 			et.TouchEvent ();
 		}
+	}
+	bool CheckIfControl(){
+		if (gameGUI.level == 1){
+			if (gameGUI.storyline <= 2){
+				return false;
+			}else{
+				return true;
+			}
+		}
+		return false;
 	}
 
 }

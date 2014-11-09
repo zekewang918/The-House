@@ -24,9 +24,7 @@ public class CollectItem : MonoBehaviour {
 		}
 		return false;
 	}
-	public void FUCK(){
-		print ("FUCK");
-	}
+
 	public int markHasItem(string item){
 		for (int i = 1; i < items.Length; i++){
 			if (items[i] == item)
