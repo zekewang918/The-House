@@ -49,12 +49,12 @@
      <Compile Include="Assets\Scripts\CameraSwitch.cs" />
      <Compile Include="Assets\Scripts\CharacterMotor.cs" />
      <Compile Include="Assets\Scripts\CollectItem.cs" />
+     <Compile Include="Assets\Scripts\Dialogs.cs" />
      <Compile Include="Assets\Scripts\EventTrigger.cs" />
      <Compile Include="Assets\Scripts\FPSController.cs" />
      <Compile Include="Assets\Scripts\GameGUI.cs" />
      <Compile Include="Assets\Scripts\LightControl.cs" />
      <Compile Include="Assets\Scripts\MainMenuGUI.cs" />
-     <Compile Include="Assets\Scripts\Story.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Glass Refraction (Pro Only)\Sources\Shaders\Glass-Stained-BumpDistort.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />

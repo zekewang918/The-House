@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Story))]
+[RequireComponent(typeof(Dialogs))]
 public class GameGUI : MonoBehaviour {
 
 	public Texture[] itemsBG = new Texture[6];
@@ -24,13 +24,13 @@ public class GameGUI : MonoBehaviour {
 
 	private bool storyBegins = true;
 
-	private Story story;
+	private Dialogs dialog;
 
 	private CameraSwitch cs;
 
 	void Start(){
 		cs = GetComponent<CameraSwitch> ();
-		story = GetComponent<Story> ();
+		dialog = GetComponent<Dialogs> ();
 		haveItems [0] = true;
 		for (int i = 1; i < haveItems.Length;i++){
 			haveItems[i] = false;
@@ -66,8 +66,8 @@ public class GameGUI : MonoBehaviour {
 		}
 	}
 	bool notEnd(){
-		if (index < story.getStoryLines(storyline, level).Length){ 
-			string temp = story.getStoryLines(storyline, level);
+		if (index < dialog.getDialogs(storyline, level).Length){ 
+			string temp = dialog.getDialogs(storyline, level);
 			if (temp == "END"){
 				storyBegins = false;
 				return false;

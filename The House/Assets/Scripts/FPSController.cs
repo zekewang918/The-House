@@ -11,6 +11,8 @@ using System.Collections.Generic;
 public class FPSController : MonoBehaviour
 {
 	public float speed = 1.0f;
+	public float jumpSpeed = 100f;
+	private bool grounded = true;
 
 	// Create a CharacterMotor called motor
 	private CharacterMotor motor;
@@ -22,6 +24,8 @@ public class FPSController : MonoBehaviour
 	private GameGUI gameGUI; 
 
 	private LightControl lc;
+
+
 
 	// Use this for initialization
 	void Start()
@@ -138,4 +142,5 @@ public class FPSController : MonoBehaviour
 			et.TouchEvent ();
 		}
 	}
+
 }

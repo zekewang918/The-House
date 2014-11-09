@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Story : MonoBehaviour {
+public class Dialogs : MonoBehaviour {
 
 	private string[] Armoire = {
 		 						"Angelia!!", "Ah..... Damn it", "WTF am I?"
@@ -17,7 +17,7 @@ public class Story : MonoBehaviour {
 
 	};
 
-	public string getStoryLines(int storyline, int level){
+	public string getDialogs(int storyline, int level){
 		if (level == 1 && storyline < Armoire.Length){
 			return Armoire[storyline];
 		}else{
