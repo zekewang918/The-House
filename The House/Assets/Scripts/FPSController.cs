@@ -78,6 +78,14 @@ public class FPSController : MonoBehaviour
 			this.transform.Translate(0, 0, Time.deltaTime * speed, Space.Self);
 			this.GetComponent<Animation>().Play("stand");
 		}
+		if (Input.GetKey(KeyCode.A)){
+			this.transform.Translate(-Time.deltaTime * speed/2, 0, 0, Space.Self);
+			this.GetComponent<Animation>().Play("stand");
+		}
+		if (Input.GetKey(KeyCode.D)){
+			this.transform.Translate(Time.deltaTime * speed/2, 0, 0, Space.Self);
+			this.GetComponent<Animation>().Play("stand");
+		}
 		if (Input.GetKey(KeyCode.S)){
 			this.transform.Translate(0, 0, -Time.deltaTime * speed/2, Space.Self);
 			this.GetComponent<Animation>().Play("stand");
