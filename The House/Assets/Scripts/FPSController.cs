@@ -149,7 +149,7 @@ public class FPSController : MonoBehaviour
 		if (gameGUI.level == 1){
 			if (gameGUI.storyline <= 2){
 				return false;
-			}else if gameGUI.storyline == 3{
+			}else if (gameGUI.storyline == 3){
 				if(!isStand){
 					this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 					this.GetComponent<Animation>().Play("SitToStand");
