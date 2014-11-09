@@ -41,6 +41,7 @@ public class FPSController : MonoBehaviour
 	{
 		if(CheckIfControl ()){
 			// Do move and jump 
+
 			Move ();
 			// Inspect Events
 			EventInspector ();
@@ -51,6 +52,7 @@ public class FPSController : MonoBehaviour
 
 			TrigItem ();
 		}
+
 	}
 	void Move(){
 		// Get the input vector from kayboard or analog stick
@@ -77,21 +79,22 @@ public class FPSController : MonoBehaviour
 		// Apply the direction to the CharacterMotor
 		motor.inputMoveDirection = transform.rotation * directionVector;
 		motor.inputJump = Input.GetButton("Jump");*/
+		this.GetComponent<Animation>().Play("stand");
 		if (Input.GetKey(KeyCode.W)){
 			this.transform.Translate(0, 0, Time.deltaTime * speed, Space.Self);
-			this.GetComponent<Animation>().Play("stand");
+			this.GetComponent<Animation>().Play("walk");
 		}
 		if (Input.GetKey(KeyCode.A)){
 			this.transform.Translate(-Time.deltaTime * speed/2, 0, 0, Space.Self);
-			this.GetComponent<Animation>().Play("stand");
+			this.GetComponent<Animation>().Play("walk");
 		}
 		if (Input.GetKey(KeyCode.D)){
 			this.transform.Translate(Time.deltaTime * speed/2, 0, 0, Space.Self);
-			this.GetComponent<Animation>().Play("stand");
+			this.GetComponent<Animation>().Play("walk");
 		}
 		if (Input.GetKey(KeyCode.S)){
 			this.transform.Translate(0, 0, -Time.deltaTime * speed/2, Space.Self);
-			this.GetComponent<Animation>().Play("stand");
+			this.GetComponent<Animation>().Play("walk");
 		}
 	}
 	// Function that collects items

@@ -50,8 +50,9 @@ public class GameGUI : MonoBehaviour {
 					GUI.DrawTexture (drect, dialogBG);
 					GUI.Label (new Rect (Screen.width * 0.20f, Screen.height*0.75f, Screen.width*0.78f, Screen.height*0.23f), message);
 				}
-				cs.talking ();
+				cs.talking2 ();
 			}else{
+				cs.stopTalking2();
 				for (int i = 0; i < 6; i++){
 					GUI.DrawTexture(new Rect(Screen.width * 0.2f + i * Screen.width * 0.1f,Screen.height * 0.9f,50.0f,50.0f), itemsBG[i]);
 				}
