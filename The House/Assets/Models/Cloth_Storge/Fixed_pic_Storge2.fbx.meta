@@ -1,0 +1,196 @@
+fileFormatVersion: 2
+guid: a29c25ef4b2cdcc4dacd170e3f5f8531
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: AM_102_001_001
+    100002: AM_102_001_002
+    100004: AM_102_001_003
+    100006: AM_102_007_002
+    100008: AM_102_007_003
+    100010: AM_102_007_003_MeshPart0
+    100012: AM_102_007_003_MeshPart1
+    100014: AM_102_014_001
+    100016: AM_102_014_002
+    100018: AM_102_014_002_MeshPart0
+    100020: AM_102_014_002_MeshPart1
+    100022: AM_102_027_001
+    100024: AM_102_027_002
+    100026: Archmodels_112_074_001
+    100028: Archmodels_112_074_002
+    100030: Archmodels_112_074_003
+    100032: Archmodels_112_074_004
+    100034: Archmodels_112_074_005
+    100036: //RootNode
+    100038: group
+    100040: group1
+    100042: group2
+    100044: group3
+    100046: pasted__group
+    100048: pasted__group2
+    100050: pasted__pasted__pCube1
+    100052: pasted__pasted__pCube1 1
+    100054: pasted__pasted__pCube2
+    100056: pasted__pCube1
+    100058: pasted__pCube1 1
+    100060: pCube1
+    100062: pCylinder1
+    400000: AM_102_001_001
+    400002: AM_102_001_002
+    400004: AM_102_001_003
+    400006: AM_102_007_002
+    400008: AM_102_007_003
+    400010: AM_102_007_003_MeshPart0
+    400012: AM_102_007_003_MeshPart1
+    400014: AM_102_014_001
+    400016: AM_102_014_002
+    400018: AM_102_014_002_MeshPart0
+    400020: AM_102_014_002_MeshPart1
+    400022: AM_102_027_001
+    400024: AM_102_027_002
+    400026: Archmodels_112_074_001
+    400028: Archmodels_112_074_002
+    400030: Archmodels_112_074_003
+    400032: Archmodels_112_074_004
+    400034: Archmodels_112_074_005
+    400036: //RootNode
+    400038: group
+    400040: group1
+    400042: group2
+    400044: group3
+    400046: pasted__group
+    400048: pasted__group2
+    400050: pasted__pasted__pCube1
+    400052: pasted__pasted__pCube1 1
+    400054: pasted__pasted__pCube2
+    400056: pasted__pCube1
+    400058: pasted__pCube1 1
+    400060: pCube1
+    400062: pCylinder1
+    2300000: AM_102_001_001
+    2300002: AM_102_001_002
+    2300004: AM_102_001_003
+    2300006: AM_102_007_002
+    2300008: AM_102_007_003_MeshPart0
+    2300010: AM_102_007_003_MeshPart1
+    2300012: AM_102_014_001
+    2300014: AM_102_014_002_MeshPart0
+    2300016: AM_102_014_002_MeshPart1
+    2300018: AM_102_027_001
+    2300020: AM_102_027_002
+    2300022: Archmodels_112_074_001
+    2300024: Archmodels_112_074_002
+    2300026: Archmodels_112_074_003
+    2300028: Archmodels_112_074_004
+    2300030: Archmodels_112_074_005
+    2300032: pasted__pasted__pCube1
+    2300034: pasted__pasted__pCube1 1
+    2300036: pasted__pasted__pCube2
+    2300038: pasted__pCube1
+    2300040: pasted__pCube1 1
+    2300042: pCube1
+    2300044: pCylinder1
+    3300000: AM_102_001_001
+    3300002: AM_102_001_002
+    3300004: AM_102_001_003
+    3300006: AM_102_007_002
+    3300008: AM_102_007_003_MeshPart0
+    3300010: AM_102_007_003_MeshPart1
+    3300012: AM_102_014_001
+    3300014: AM_102_014_002_MeshPart0
+    3300016: AM_102_014_002_MeshPart1
+    3300018: AM_102_027_001
+    3300020: AM_102_027_002
+    3300022: Archmodels_112_074_001
+    3300024: Archmodels_112_074_002
+    3300026: Archmodels_112_074_003
+    3300028: Archmodels_112_074_004
+    3300030: Archmodels_112_074_005
+    3300032: pasted__pasted__pCube1
+    3300034: pasted__pasted__pCube1 1
+    3300036: pasted__pasted__pCube2
+    3300038: pasted__pCube1
+    3300040: pasted__pCube1 1
+    3300042: pCube1
+    3300044: pCylinder1
+    4300000: pasted__pCube1
+    4300002: pasted__pasted__pCube1
+    4300004: pasted__pasted__pCube2
+    4300006: pasted__pCube1
+    4300008: pasted__pasted__pCube1
+    4300010: pCube1
+    4300012: pCylinder1
+    4300014: AM_102_001_002
+    4300016: AM_102_001_003
+    4300018: AM_102_007_002
+    4300020: AM_102_007_003_MeshPart0
+    4300022: AM_102_007_003_MeshPart1
+    4300024: AM_102_014_001
+    4300026: AM_102_014_002_MeshPart0
+    4300028: AM_102_014_002_MeshPart1
+    4300030: AM_102_001_001
+    4300032: AM_102_027_001
+    4300034: AM_102_027_002
+    4300036: Archmodels_112_074_002
+    4300038: Archmodels_112_074_003
+    4300040: Archmodels_112_074_005
+    4300042: Archmodels_112_074_001
+    4300044: Archmodels_112_074_004
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    pivotNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
