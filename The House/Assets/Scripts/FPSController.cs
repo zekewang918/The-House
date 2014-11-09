@@ -144,6 +144,15 @@ public class FPSController : MonoBehaviour
 				}
 			}
 		}
+		if (Physics.Raycast (ray, out hit, 100)) {
+			GameObject target = hit.collider.gameObject;
+			if(Input.GetMouseButton(0))
+			{
+				if (target.tag == "PasswordLock"){
+					gameGUI.storyline = 5;
+				}
+			}
+		}
 
 
 	}

@@ -12,6 +12,10 @@ public class GameGUI : MonoBehaviour {
 
 	public Texture[] lockPassword = new Texture[4];
 
+	private int[] lockNumber = {0, 0, 0, 0};
+
+	public Texture[] numbers = new Texture[10];
+
 	public Texture dialogBG;
 	
 	private string message = "";
@@ -35,6 +39,7 @@ public class GameGUI : MonoBehaviour {
 		for (int i = 1; i < haveItems.Length;i++){
 			haveItems[i] = false;
 		}
+
 	}
 
 	void Update(){
@@ -51,6 +56,19 @@ public class GameGUI : MonoBehaviour {
 					GUI.Label (new Rect (Screen.width * 0.20f, Screen.height*0.75f, Screen.width*0.78f, Screen.height*0.23f), message);
 				}
 				cs.talking2 ();
+			}else if (storyline == 5){
+				for (int i = 0; i < lockPassword.Length;i++){
+					GUI.DrawTexture(new Rect(Screen.width * 0.3f + i * Screen.width * 0.125f,Screen.height * 0.5f,Screen.width* 0.1f,Screen.height* 0.1f), lockPassword[i]);
+					if (GUI.Button(new Rect(Screen.width*0.3f+i*Screen.width*0.125f, Screen.height*0.4f, Screen.width*0.1f, Screen.height* 0.1f), "+")){
+						if (lockNumber[i] < 9){
+							lockPassword[i] = numbers[lockNumber[i]+1];
+							lockNumber[i]++;
+						}else{
+							lockPassword[i] = numbers[0];
+							lockNumber[i] = 0;
+						}
+					}
+				}
 			}else{
 				cs.stopTalking2();
 				for (int i = 0; i < 6; i++){
