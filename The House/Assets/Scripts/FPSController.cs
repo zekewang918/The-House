@@ -23,7 +23,7 @@ public class FPSController : MonoBehaviour
 
 	private LightControl lc;
 
-
+	private bool isStand = false;
 
 	// Use this for initialization
 	void Start()
@@ -79,22 +79,23 @@ public class FPSController : MonoBehaviour
 		// Apply the direction to the CharacterMotor
 		motor.inputMoveDirection = transform.rotation * directionVector;
 		motor.inputJump = Input.GetButton("Jump");*/
-		this.GetComponent<Animation>().Play("stand");
+
+		//this.GetComponent<Animation>().Play("Stand");
 		if (Input.GetKey(KeyCode.W)){
 			this.transform.Translate(0, 0, Time.deltaTime * speed, Space.Self);
-			this.GetComponent<Animation>().Play("walk");
+			this.GetComponent<Animation>().Play("Walk");
 		}
 		if (Input.GetKey(KeyCode.A)){
 			this.transform.Translate(-Time.deltaTime * speed/2, 0, 0, Space.Self);
-			this.GetComponent<Animation>().Play("walk");
+			this.GetComponent<Animation>().Play("Walk");
 		}
 		if (Input.GetKey(KeyCode.D)){
 			this.transform.Translate(Time.deltaTime * speed/2, 0, 0, Space.Self);
-			this.GetComponent<Animation>().Play("walk");
+			this.GetComponent<Animation>().Play("Walk");
 		}
 		if (Input.GetKey(KeyCode.S)){
 			this.transform.Translate(0, 0, -Time.deltaTime * speed/2, Space.Self);
-			this.GetComponent<Animation>().Play("walk");
+			this.GetComponent<Animation>().Play("Walk");
 		}
 	}
 	// Function that collects items
@@ -147,6 +148,13 @@ public class FPSController : MonoBehaviour
 	bool CheckIfControl(){
 		if (gameGUI.level == 1){
 			if (gameGUI.storyline <= 2){
+				return false;
+			}else if gameGUI.storyline == 3{
+				if(!isStand){
+					this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+					this.GetComponent<Animation>().Play("SitToStand");
+					isStand = true;
+				}
 				return false;
 			}else{
 				return true;
