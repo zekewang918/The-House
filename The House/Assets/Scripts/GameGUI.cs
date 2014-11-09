@@ -26,7 +26,7 @@ public class GameGUI : MonoBehaviour {
 
 	private Dialogs dialog;
 
-	private CameraSwitch cs;
+	public CameraSwitch cs;
 
 	void Start(){
 		cs = GetComponent<CameraSwitch> ();
@@ -42,7 +42,7 @@ public class GameGUI : MonoBehaviour {
 	}
 
 	void OnGUI(){
-
+		//print(cs.player.cullingMask);
 		if(level == 1){
 			if (storyline <= 2){
 				if (dialogNotEnd()){

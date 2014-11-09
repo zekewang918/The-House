@@ -23,7 +23,11 @@ public class FPSController : MonoBehaviour
 
 	private LightControl lc;
 
+	//private CharacterItem ci;
+
 	private bool isStand = false;
+
+	private string item = "Hand";
 
 	// Use this for initialization
 	void Start()
@@ -33,12 +37,14 @@ public class FPSController : MonoBehaviour
 		ct = GetComponent<CollectItem> ();
 		gameGUI = GetComponent<GameGUI> ();
 		lc = GetComponent<LightControl> ();
+		//ci = GetComponent<CharacterItem>();
 
 	}
 	
 	// Update is called once per frame
 	void Update()
 	{
+
 		if(CheckIfControl ()){
 			// Do move and jump 
 
@@ -85,14 +91,14 @@ public class FPSController : MonoBehaviour
 			this.transform.Translate(0, 0, Time.deltaTime * speed, Space.Self);
 			this.GetComponent<Animation>().Play("Walk");
 		}
-		if (Input.GetKey(KeyCode.A)){
+		/*if (Input.GetKey(KeyCode.A)){
 			this.transform.Translate(-Time.deltaTime * speed/2, 0, 0, Space.Self);
 			this.GetComponent<Animation>().Play("Walk");
 		}
 		if (Input.GetKey(KeyCode.D)){
 			this.transform.Translate(Time.deltaTime * speed/2, 0, 0, Space.Self);
 			this.GetComponent<Animation>().Play("Walk");
-		}
+		}*/
 		if (Input.GetKey(KeyCode.S)){
 			this.transform.Translate(0, 0, -Time.deltaTime * speed/2, Space.Self);
 			this.GetComponent<Animation>().Play("Walk");
@@ -128,14 +134,46 @@ public class FPSController : MonoBehaviour
 				}
 			}
 		}
+		if (Physics.Raycast (ray, out hit, 100)) {
+			GameObject target = hit.collider.gameObject;
+			if(Input.GetMouseButton(0) && item == "Knife")
+			{
+				if (target.tag == "Rope"){
+					Destroy(target);
+					gameGUI.storyline++;
+				}
+			}
+		}
 
 
 	}
 	// Function that changes items
 	void ChangeItem(){
-		if (Input.GetKey(KeyCode.Alpha1)){
-
+		if (Input.GetKey(KeyCode.Alpha1) && gameGUI.haveItems[0] == true){
+			item = "Hand";
+			print(item);
 		}
+		if (Input.GetKey(KeyCode.Alpha2) && gameGUI.haveItems[1] == true){
+			item = "Knife";
+			print(item);
+		}
+		if (Input.GetKey(KeyCode.Alpha3) && gameGUI.haveItems[2] == true){
+			item = "FlashLight";
+			print(item);
+		}
+		if (Input.GetKey(KeyCode.Alpha3) && gameGUI.haveItems[3] == true){
+			item = "";
+			print(item);
+		}
+		if (Input.GetKey(KeyCode.Alpha3) && gameGUI.haveItems[4] == true){
+			item = "";
+			print(item);
+		}
+		if (Input.GetKey(KeyCode.Alpha3) && gameGUI.haveItems[5] == true){
+			item = "";
+			print(item);
+		}
+
 	}
 	// Function that triggers the event
 	void EventInspector(){
@@ -149,13 +187,16 @@ public class FPSController : MonoBehaviour
 		if (gameGUI.level == 1){
 			if (gameGUI.storyline <= 2){
 				return false;
-			}else if (gameGUI.storyline == 3){
-				if(!isStand){
+			}else if (gameGUI.storyline == 4){
+				//if(!isStand){
+					this.GetComponent<BoxCollider>().enabled = true;
 					this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 					this.GetComponent<Animation>().Play("SitToStand");
+					gameGUI.cs.player.cullingMask = -257;
 					isStand = true;
-				}
-				return false;
+					gameGUI.storyline++;
+				//} 
+				return true;
 			}else{
 				return true;
 			}
