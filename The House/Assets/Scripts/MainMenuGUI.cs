@@ -26,6 +26,9 @@ public class MainMenuGUI : MonoBehaviour {
 		if (GUI.Button(new Rect(Screen.width * 0.72f, Screen.height * 0.7f, Screen.width * 0.15f, Screen.height * 0.2f), team, myStyle)){
 			Application.LoadLevel("Team");
 		}
+		/*if (GUI.Button(new Rect(Screen.width * 0.72f, Screen.height * 0.8f, Screen.width * 0.15f, Screen.height * 0.2f), team, myStyle)){
+			Application.Quit();
+		}*/
 		// Define the area of own GUI Style
 		GUILayout.EndArea ();
 	}
