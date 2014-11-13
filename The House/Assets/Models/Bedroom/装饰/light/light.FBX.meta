@@ -1,0 +1,160 @@
+fileFormatVersion: 2
+guid: 012535bb7e45b2a479f15952c88bfef0
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: archmodels69_044_00
+    100002: archmodels69_044_01
+    100004: archmodels69_044_02
+    100006: archmodels69_044_03
+    100008: archmodels69_044_04
+    100010: archmodels69_044_05
+    100012: archmodels69_044_06
+    100014: archmodels69_044_07
+    100016: archmodels69_044_08
+    100018: archmodels69_044_09
+    100020: archmodels69_044_10
+    100022: archmodels69_044_11
+    100024: archmodels69_044_12
+    100026: archmodels69_044_13
+    100028: archmodels69_044_14
+    100030: archmodels69_044_15
+    100032: archmodels69_044_16
+    100034: archmodels69_044_17
+    100036: archmodels69_044_18
+    100038: //RootNode
+    400000: archmodels69_044_00
+    400002: archmodels69_044_01
+    400004: archmodels69_044_02
+    400006: archmodels69_044_03
+    400008: archmodels69_044_04
+    400010: archmodels69_044_05
+    400012: archmodels69_044_06
+    400014: archmodels69_044_07
+    400016: archmodels69_044_08
+    400018: archmodels69_044_09
+    400020: archmodels69_044_10
+    400022: archmodels69_044_11
+    400024: archmodels69_044_12
+    400026: archmodels69_044_13
+    400028: archmodels69_044_14
+    400030: archmodels69_044_15
+    400032: archmodels69_044_16
+    400034: archmodels69_044_17
+    400036: archmodels69_044_18
+    400038: //RootNode
+    2300000: archmodels69_044_00
+    2300002: archmodels69_044_01
+    2300004: archmodels69_044_02
+    2300006: archmodels69_044_03
+    2300008: archmodels69_044_04
+    2300010: archmodels69_044_05
+    2300012: archmodels69_044_06
+    2300014: archmodels69_044_07
+    2300016: archmodels69_044_08
+    2300018: archmodels69_044_09
+    2300020: archmodels69_044_10
+    2300022: archmodels69_044_11
+    2300024: archmodels69_044_12
+    2300026: archmodels69_044_13
+    2300028: archmodels69_044_14
+    2300030: archmodels69_044_15
+    2300032: archmodels69_044_16
+    2300034: archmodels69_044_17
+    2300036: archmodels69_044_18
+    3300000: archmodels69_044_00
+    3300002: archmodels69_044_01
+    3300004: archmodels69_044_02
+    3300006: archmodels69_044_03
+    3300008: archmodels69_044_04
+    3300010: archmodels69_044_05
+    3300012: archmodels69_044_06
+    3300014: archmodels69_044_07
+    3300016: archmodels69_044_08
+    3300018: archmodels69_044_09
+    3300020: archmodels69_044_10
+    3300022: archmodels69_044_11
+    3300024: archmodels69_044_12
+    3300026: archmodels69_044_13
+    3300028: archmodels69_044_14
+    3300030: archmodels69_044_15
+    3300032: archmodels69_044_16
+    3300034: archmodels69_044_17
+    3300036: archmodels69_044_18
+    4300000: archmodels69_044_00
+    4300002: archmodels69_044_01
+    4300004: archmodels69_044_02
+    4300006: archmodels69_044_03
+    4300008: archmodels69_044_04
+    4300010: archmodels69_044_05
+    4300012: archmodels69_044_06
+    4300014: archmodels69_044_07
+    4300016: archmodels69_044_08
+    4300018: archmodels69_044_09
+    4300020: archmodels69_044_10
+    4300022: archmodels69_044_11
+    4300024: archmodels69_044_12
+    4300026: archmodels69_044_13
+    4300028: archmodels69_044_14
+    4300030: archmodels69_044_15
+    4300032: archmodels69_044_16
+    4300034: archmodels69_044_17
+    4300036: archmodels69_044_18
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    pivotNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
