@@ -2975,8 +2975,169 @@ ModelImporter:
     4300314: polySurface154
     4300316: polySurface155
     4300318: polySurface121
+    6400000: achmodels69_016_01
+    6400002: archmodels64_004_05
+    6400004: archmodels69_001_05
+    6400006: archmodels69_036_04
+    6400008: Archmodels_114_06_MeshPart0
+    6400010: Archmodels_114_06_MeshPart1
+    6400012: Archmodels_114_07_MeshPart0
+    6400014: Archmodels_114_07_MeshPart1
+    6400016: Archmodels_114_07_MeshPart2
+    6400018: Archmodels_114_07_MeshPart3
+    6400020: Archmodels_114_07_MeshPart4
+    6400022: Archmodels_114_07_MeshPart5
+    6400024: obj_017
+    6400026: obj_07
+    6400028: Particle View 002_MeshPart0
+    6400030: Particle View 002_MeshPart1
+    6400032: pasted__Archmodels_112_074_006
+    6400034: pasted__pasted__pasted__pasted__pCube5
+    6400036: pasted__pasted__pasted__pasted__pCube5 1
+    6400038: pasted__pasted__pasted__pCube14
+    6400040: pasted__pasted__pasted__pCube5
+    6400042: pasted__pasted__pasted__pCube5 1
+    6400044: pasted__pasted__pCube14
+    6400046: pasted__pasted__pCube14 1
+    6400048: pasted__pCube14
+    6400050: pasted__pCube14 1
+    6400052: pasted__pCube4
+    6400054: pasted__pCube5
+    6400056: pCube10
+    6400058: pCube13
+    6400060: pCube14
+    6400062: pCube4
+    6400064: pCube8
+    6400066: pCylinder2
+    6400068: polySurface1
+    6400070: polySurface10
+    6400072: polySurface100
+    6400074: polySurface101
+    6400076: polySurface102
+    6400078: polySurface103
+    6400080: polySurface104
+    6400082: polySurface105
+    6400084: polySurface106
+    6400086: polySurface107
+    6400088: polySurface108
+    6400090: polySurface109
+    6400092: polySurface11
+    6400094: polySurface110
+    6400096: polySurface111
+    6400098: polySurface118
+    6400100: polySurface12
+    6400102: polySurface121
+    6400104: polySurface13
+    6400106: polySurface14
+    6400108: polySurface143
+    6400110: polySurface144
+    6400112: polySurface145
+    6400114: polySurface146
+    6400116: polySurface147
+    6400118: polySurface148
+    6400120: polySurface149
+    6400122: polySurface15
+    6400124: polySurface150
+    6400126: polySurface151
+    6400128: polySurface152
+    6400130: polySurface153
+    6400132: polySurface154
+    6400134: polySurface155
+    6400136: polySurface16
+    6400138: polySurface17
+    6400140: polySurface18
+    6400142: polySurface19
+    6400144: polySurface2
+    6400146: polySurface20
+    6400148: polySurface21
+    6400150: polySurface22
+    6400152: polySurface23
+    6400154: polySurface24
+    6400156: polySurface25
+    6400158: polySurface26
+    6400160: polySurface27
+    6400162: polySurface28
+    6400164: polySurface29
+    6400166: polySurface3
+    6400168: polySurface30
+    6400170: polySurface31
+    6400172: polySurface32
+    6400174: polySurface33
+    6400176: polySurface34
+    6400178: polySurface35
+    6400180: polySurface36
+    6400182: polySurface37
+    6400184: polySurface38
+    6400186: polySurface39
+    6400188: polySurface4
+    6400190: polySurface40
+    6400192: polySurface41
+    6400194: polySurface42
+    6400196: polySurface43
+    6400198: polySurface44
+    6400200: polySurface45
+    6400202: polySurface46
+    6400204: polySurface47
+    6400206: polySurface48
+    6400208: polySurface49
+    6400210: polySurface5
+    6400212: polySurface50
+    6400214: polySurface51
+    6400216: polySurface52
+    6400218: polySurface53
+    6400220: polySurface54
+    6400222: polySurface55
+    6400224: polySurface56
+    6400226: polySurface57
+    6400228: polySurface58
+    6400230: polySurface59
+    6400232: polySurface6
+    6400234: polySurface60
+    6400236: polySurface61
+    6400238: polySurface62
+    6400240: polySurface63
+    6400242: polySurface64
+    6400244: polySurface65
+    6400246: polySurface66
+    6400248: polySurface67
+    6400250: polySurface68
+    6400252: polySurface69
+    6400254: polySurface7
+    6400256: polySurface70
+    6400258: polySurface71
+    6400260: polySurface72
+    6400262: polySurface73
+    6400264: polySurface75
+    6400266: polySurface76
+    6400268: polySurface77
+    6400270: polySurface78
+    6400272: polySurface79
+    6400274: polySurface8
+    6400276: polySurface80
+    6400278: polySurface81
+    6400280: polySurface82
+    6400282: polySurface83
+    6400284: polySurface84
+    6400286: polySurface85
+    6400288: polySurface86
+    6400290: polySurface87
+    6400292: polySurface88
+    6400294: polySurface89
+    6400296: polySurface9
+    6400298: polySurface90
+    6400300: polySurface91
+    6400302: polySurface92
+    6400304: polySurface93
+    6400306: polySurface94
+    6400308: polySurface95
+    6400310: polySurface96
+    6400312: polySurface97
+    6400314: polySurface98
+    6400316: polySurface99
+    6400318: pPipe2
     7400000: Take 001
     9500000: //RootNode
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -2999,7 +3160,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -3030,7 +3191,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
