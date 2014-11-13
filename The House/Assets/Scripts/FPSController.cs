@@ -44,6 +44,7 @@ public class FPSController : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		CollectItem ();
 
 		if(CheckIfControl ()){
 			// Do move and jump 
@@ -54,7 +55,6 @@ public class FPSController : MonoBehaviour
 			// Change item if user press 1-6
 			ChangeItem ();
 			// Collect item if user click collectable item
-			CollectItem ();
 
 			TrigItem ();
 		}
@@ -108,7 +108,7 @@ public class FPSController : MonoBehaviour
 	void CollectItem(){
 		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 		RaycastHit hit;
-		if (Physics.Raycast (ray, out hit, 100)) {
+		if (Physics.Raycast (ray, out hit, 20)) {
 			GameObject target = hit.collider.gameObject;
 			if(Input.GetMouseButton(0))
 			{
@@ -124,7 +124,7 @@ public class FPSController : MonoBehaviour
 	void TrigItem(){
 		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 		RaycastHit hit;
-		if (Physics.Raycast (ray, out hit, 100)) {
+		if (Physics.Raycast (ray, out hit, 20)) {
 			GameObject target = hit.collider.gameObject;
 			if(Input.GetMouseButton(0))
 			{
@@ -144,12 +144,12 @@ public class FPSController : MonoBehaviour
 				}
 			}
 		}
-		if (Physics.Raycast (ray, out hit, 100)) {
+		if (Physics.Raycast (ray, out hit, 20)) {
 			GameObject target = hit.collider.gameObject;
 			if(Input.GetMouseButton(0))
 			{
 				if (target.tag == "PasswordLock"){
-					gameGUI.storyline = 5;
+					gameGUI.storyline = 6;
 				}
 			}
 		}

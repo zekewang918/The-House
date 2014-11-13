@@ -30,15 +30,19 @@ public class GameGUI : MonoBehaviour {
 
 	private Dialogs dialog;
 
+	private EventTrigger et;
+
 	public CameraSwitch cs;
 
 	void Start(){
 		cs = GetComponent<CameraSwitch> ();
 		dialog = GetComponent<Dialogs> ();
 		haveItems [0] = true;
+		et = GetComponent<EventTrigger> ();
 		for (int i = 1; i < haveItems.Length;i++){
 			haveItems[i] = false;
 		}
+
 
 	}
 
@@ -56,7 +60,7 @@ public class GameGUI : MonoBehaviour {
 					GUI.Label (new Rect (Screen.width * 0.20f, Screen.height*0.75f, Screen.width*0.78f, Screen.height*0.23f), message);
 				}
 				cs.talking2 ();
-			}else if (storyline == 5){
+			}else if (storyline == 6){
 				for (int i = 0; i < lockPassword.Length;i++){
 					GUI.DrawTexture(new Rect(Screen.width * 0.3f + i * Screen.width * 0.125f,Screen.height * 0.5f,Screen.width* 0.1f,Screen.height* 0.1f), lockPassword[i]);
 					if (GUI.Button(new Rect(Screen.width*0.3f+i*Screen.width*0.125f, Screen.height*0.4f, Screen.width*0.1f, Screen.height* 0.1f), "+")){
@@ -67,6 +71,10 @@ public class GameGUI : MonoBehaviour {
 							lockPassword[i] = numbers[0];
 							lockNumber[i] = 0;
 						}
+					}
+					if(et.checkPassword(lockNumber)){
+						storyline = 7;
+						GameObject.FindWithTag("Armoire-Door").GetComponent<Animator>().Play("OpenDoor");
 					}
 				}
 			}else{

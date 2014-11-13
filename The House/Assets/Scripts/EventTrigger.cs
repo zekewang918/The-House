@@ -23,9 +23,16 @@ public class EventTrigger : MonoBehaviour {
 			// Check if the collider that hits is Enemy
 			
 			if(hit.collider.tag == "Armoire-Door"){
-				cs.cameraSwitch(1);
+			
 			}
 		
+		}
+	}
+	public bool checkPassword(int[] password){
+		if (password[0] == 6 && password[1] == 9 && password[2] == 0 && password[3] == 3){
+			return true;
+		}else{
+			return false;
 		}
 	}
 }
