@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEditor;
 using System.Collections;
 
 [RequireComponent(typeof(Dialogs))]
@@ -24,7 +25,7 @@ public class GameGUI : MonoBehaviour {
 
 	public int storyline = 0;
 
-	public int level = 1;
+	public int level;
 
 	//private bool storyBegins = true;
 
@@ -42,7 +43,15 @@ public class GameGUI : MonoBehaviour {
 		for (int i = 1; i < haveItems.Length;i++){
 			haveItems[i] = false;
 		}
+		if (EditorApplication.currentScene == "Assets/Scenes/Armoire.unity"){
+			level = 1;
+		}else if (EditorApplication.currentScene == "Assets/Scenes/Bedroom.unity"){
+			level = 2;
+		}else if (EditorApplication.currentScene == "Assets/Scenes/Livingroom.unity"){
+			level = 3;
+		}
 
+		print (EditorApplication.currentScene);
 
 	}
 
@@ -52,6 +61,7 @@ public class GameGUI : MonoBehaviour {
 
 	void OnGUI(){
 		//print(cs.player.cullingMask);
+		print (level);
 		if(level == 1){
 			if (storyline <= 2){
 				if (dialogNotEnd()){
